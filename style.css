@@ -1,0 +1,82 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.01); /* Slight zoom effect on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40; /* Dark gray */
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    width: 30%; /* Change to a smaller width for a cleaner layout */
+    margin-right: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 4px; /* Slightly round corners */
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+h2 {
+    text-align: center;
+    color: #495057; /* Medium gray */
+    margin-top: 30px; /* Space above the graph */
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column; /* Stack inputs on smaller screens */
+    }
+    input[type="text"], input[type="date"] {
+        width: 100%; /* Full width on small screens */
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between stacked inputs */
+    }
+    button {
+        width: 100%; /* Full width for button */
+    }
+}
